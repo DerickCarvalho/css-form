@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+
+:root {
+    --fonte-padrao: 'Nunito', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte-padrao);
+}
+
+/* -----===[ CLASSES ÚTEIS ]===----- */
+
+.flex-row-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-row-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flex-row-space-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex-row-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* -----=======================----- */
+
+
+
+/* -----===[ CABEÇALHO ]===----- */
+
+header {
+    padding: 50px 100px;
+}
+.logo:hover {
+    cursor: pointer;
+}
+.logo h1{
+    font-weight: 900;
+}
+.logo img {
+    width: 80px;
+    padding: 10px;
+}
+.header-menu a {
+    text-decoration: none;
+    color: #FFF;
+}
+.header-menu p {
+    background: #00b7ff;
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: linear transform 0.1s;
+    font-weight: 600;
+}
+.header-menu p:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+/* -----==================----- */
+
+/* -----===[ MENU MOBILE ]===----- */
+
+.header-mobile-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 100px;
+    text-align: center;
+    position: absolute;
+    background: #FFFFFF;
+    border: 2px solid #e0e0e0;
+    border-radius: 20px;
+    margin-top: -600px;
+    transition: linear margin-top 0.5s;
+}
+.header-mobile-menu p {
+    background: #00b7ff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    transition: linear transform 0.1s;
+    font-weight: 600;
+}
+.header-mobile-menu a {
+    text-decoration: none;
+    color: #FFF;
+}
+.menu-hamburguer {
+    display: none;
+}
+.line {
+    width: 50px;
+    padding: 3px 0;
+    margin: 5px 0;
+    border-radius: 5px;
+    background-color: #000;
+    transition: linear rotate 0.1s;
+}
+
+/* -----=====================----- */
+
+
+
+/* -----===[ CONTEÚDO PRINCIPAL ]===----- */
+
+main {
+    background: #00eeff;
+    padding: 50px 0;
+}
+.banner-img img {
+    width: 80%;
+    padding: 20px;
+}
+input:focus, textarea:focus, select:focus {
+    box-shadow: 0;
+    border: none;
+    outline: 0;
+}
+.form {
+    margin: 20px;
+    background: #00b7ff;
+    padding: 20px;
+    border-radius: 10px;
+    color: #FFF;
+    width: 600px;
+}
+.form-header {
+    padding: 20px 0;
+}
+.form-header h1 {
+    font-size: 32px;
+}
+.text-camp {
+    width: 100%;
+    padding: 5px;
+    border: 0;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.form p {
+    padding: 5px 0;
+}
+.submit-button {
+    margin-top: 30px;
+    width: 100%;
+    padding: 5px;
+    font-size: 32px;
+    font-weight: 900;border: 0;
+    background: #ff9100;
+    color: #FFF;
+    border-radius: 8px;
+    transition: linear transform 0.1s;
+}
+.submit-button:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+/* -----============================----- */
+
+
+
+/* -----===[ RODAPÉ ]===----- */
+
+.footer-banner {
+    padding: 50px 0;
+}
+.footer-banner img {
+    width: 200px;
+}
+.autor-info h3 {
+    padding: 20px 10px;
+}
+.autor-info p {
+    font-size: 14px;
+    padding: 5px 5px;
+}
+
+/* -----================----- */
+
+
+/* -----===[ RESPONSITIVADE ]===----- */
+
+    @media (max-width: 880px) {
+        header {
+            padding: 50px 20px;
+        }
+    }
+
+    @media (max-width: 650px) {
+        .banner-img {
+            padding: 0;
+        }
+        .banner-img img {
+            width: 100%;
+        }
+        .form-header h1 {
+            font-size: 24px;
+        }
+        .text-camp {
+            font-size: 14px;
+        }
+        .submit-button {
+            font-size: 24px;
+        }
+        .header-menu {
+            display: none;
+        }
+        .menu-hamburguer {
+            display: block;
+        }
+    }
+
+    @media (max-width: 530px) {
+        .logo h1 {
+            font-size: 24px;
+        }
+        main {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .banner-img img {
+            width: 50%;
+        }
+        .form {
+            margin: 0 10px;
+            width: 95%;
+        }
+        .form-header h1 {
+            font-size: 18px;
+        }
+        .form-header h3 {
+            font-size: 12px;
+            padding: 10px 0;
+        }
+        .footer-banner img {
+            width: 120px;
+        }
+    }
+
+    @media (max-width: 360px) {
+        .logo img {
+            width: 40px;
+            padding: 0;
+        }
+        .logo h1 {
+            font-size: 14px;
+        }
+        .submit-button {
+            font-size: 18px;
+        }
+        .footer-banner img {
+            width: 80px;
+        }
+        .autor-info h3 {
+            font-size: 14px;
+        }
+    }
+
+/* -----========================----- */

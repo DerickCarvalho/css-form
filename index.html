@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/img/ico.png">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>CSS - Autoria Web</title>
+</head>
+<body>
+    <header class="flex-row-space-between">
+        <div class="logo flex-row-center">
+            <img src="./assets/img/ico.png" alt="Logo do site, tratando-se da logo do CSS 3">
+            <h1>Logo do site</h1>
+        </div>
+
+        <nav class="header-menu flex-row-center">
+            <p><a href="#">Home</a></p>
+            <p><a href="#">Perfil</a></p>
+            <p><a href="#">Notícias</a></p>
+        </nav>
+
+        <nav id="menuMobile" class="header-mobile-menu">
+            <p><a href="#">Home</a></p>
+            <p><a href="#">Perfil</a></p>
+            <p><a href="#">Notícias</a></p>
+        </nav>
+
+        <div class="flex-column-center menu-hamburguer" id="hamburguer">
+            <div class="line" id="top-line"></div>
+            <div class="line" id="main-line"></div>
+            <div class="line" id="bottom-line"></div>
+        </div>
+    </header>
+
+    <main class="flex-row-center">
+        <div class="banner-img flex-row-center">
+            <img src="./assets/img/ico.png" alt="">
+        </div>
+
+        <div class="form">
+            <form class="flex-column-left" action="#" method="GET">
+                <div class="form-header">
+                    <h1>Para receber as últimas atualizações do CSS</h1>
+                    <h3>Cadastre-se abaixo</h3>
+                </div>
+                <p>Nome:</p>
+                <input class="text-camp" type="text" name="nome" id="nome" required>
+                <p>E-mail:</p>
+                <input class="text-camp" type="email" name="email" id="email" required>
+                <p>Data de Nascimento:</p>
+                <input class="text-camp" type="date" name="birtday" id="birtday" required>
+                <p>Qual você possui mais afinidade atualmente?</p>
+                <select class="text-camp" name="afinidade" id="afinidade" required>
+                    <option value="0">Selecione</option>
+                    <option value="1">HTML 5</option>
+                    <option value="2">CSS3</option>
+                    <option value="3">JavaScript</option>
+                </select>
+                <input class="submit-button" type="submit" value="Cadastre-se">
+            </form>
+        </div>
+    </main>
+
+    <footer class="flex-row-space-around">
+        <div class="footer-banner flex-row-center">
+            <img src="./assets/img/ico.png" alt="">
+        </div>
+
+        <div class="autor-info">
+            <h3>Site criado puramente em HTML 5 e CSS 3</h3>
+            <p>&copy; 2023.1 - Derick Carvalho</p>
+            <p>Portifólio -> <a href="https://github.com/DerickCarvalho">GitHub</a></p>
+        </div>
+    </footer>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
